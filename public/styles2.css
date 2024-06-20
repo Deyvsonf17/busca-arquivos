@@ -115,3 +115,94 @@ body {
     text-align: right;
     margin-top: 10px; /* Espaçamento superior */
 }
+
+
+/* Modal*/
+
+/* Estilos adicionais para o modal */
+.modal-content {
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    border: none;
+}
+
+.modal-header {
+    border-radius: 20px 20px 0 0;
+    padding: 20px;
+}
+
+.modal-body {
+    padding: 40px;
+}
+
+.modal-footer {
+    border-radius: 0 0 20px 20px;
+    padding: 20px;
+}
+
+.checkmark {
+    width: 80px;
+    height: 80px;
+    stroke-width: 2px;
+    stroke: #4caf50;
+    fill: none;
+    animation: drawCheck 0.6s ease forwards;
+}
+
+.checkmark-circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #4caf50;
+    fill: none;
+    animation: strokeCircle 0.6s ease forwards;
+}
+
+.checkmark-check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: strokeCheck 0.3s 0.6s ease forwards;
+}
+
+@keyframes strokeCircle {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes strokeCheck {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes drawCheck {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Animação de zoom para o modal */
+.modal-dialog-zoom {
+    animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1);
+    }
+}
